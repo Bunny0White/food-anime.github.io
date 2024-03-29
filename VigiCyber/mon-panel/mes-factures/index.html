@@ -1,0 +1,105 @@
+
+<!-- Mirrored from vigicyber.fr/mon-panel/mes-factures/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 27 Mar 2024 12:38:57 GMT -->
+<head>
+  <meta charset="UTF-8" />
+  <title>Mes Factures - VIGICYBER</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com/" />
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jomolhari&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin: 0;
+      min-height: 100vh;
+    }
+  .factures-container {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 80%;
+  }
+  .facture-mois h2 {
+    margin-top: 20px;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    margin-bottom: 10px;
+  }
+  button {
+    margin-left: 10px;
+  }
+	
+  </style>
+</head>
+<body>
+  <div class="header">
+    <a href="../../index.html">
+      <img src="vigicyber.png" alt="vigicyber.fr" class="logo" />
+    </a>
+  <div class="buttons">
+    <button class="button-17" onclick="location.href='../../index.html';">Accueil</button>
+    <button class="button-17" onclick="location.href='mailto:contact@vigicyber.fr';">Contact</button>
+    <!-- Utiliser un menu déroulant pour les actions supplémentaires -->
+    <div class="dropdown">
+      <button class="button-17 dropdown-toggle">Mon compte</button>
+      <div class="dropdown-content">
+		<a href="../../index.html" onclick="event.preventDefault(); location.href='../index.html';">Mon espace</a>
+        <a href="../../index.html" onclick="event.preventDefault(); location.href='index.html';">Facturations</a>
+        <a href="../../index.html" onclick="event.preventDefault(); location.href='../../index.html';">Se déconnecter</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="main-content">
+  <h1>Mes Factures</h1>
+  <div class="factures-container">
+    <!-- Exemple pour Janvier -->
+    <div class="facture-mois">
+      <h2>Janvier</h2>
+      <ul>
+        <li>
+          <span>Facture du 15 Janvier 2024</span>
+      <button onclick="telechargerFacture('https://drive.google.com/uc?export=download&amp;id=0B4z2gzEmkDDCa0tNQWMtNTk1Z2s')">Télécharger</button>
+      <button onclick="previsualiserFacture('https://drive.google.com/file/d/0B4z2gzEmkDDCa0tNQWMtNTk1Z2s/view?pli=1&amp;resourcekey=0-Zf0OPixiKWgm8JZirbp7JA')">Prévisualiser</button>
+        </li>
+        <!-- Répétez pour d'autres factures de Janvier si nécessaire -->
+      </ul>
+    </div>
+    <!-- Répétez pour chaque mois avec les factures correspondantes -->
+  </div>
+</div>
+
+
+<script>
+  function afficherSection(sectionId) {
+    var sections = document.querySelectorAll('.content-section');
+    sections.forEach(function(section) {
+      section.style.display = 'none';
+    });
+    document.getElementById(sectionId).style.display = 'block';
+  }
+
+function telechargerFacture(url) {
+  window.open(url, '_blank');
+}
+
+function previsualiserFacture(url) {
+  window.open(url, '_blank');
+}
+
+</script>
+
+</body>
+
+<!-- Mirrored from vigicyber.fr/mon-panel/mes-factures/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 27 Mar 2024 12:38:59 GMT -->
+</html>

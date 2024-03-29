@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<!-- Mirrored from vigicyber.fr/mon-espace-client/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 27 Mar 2024 12:38:46 GMT -->
+<head>
+  <meta charset="UTF-8" />
+  <title>Connexion - VIGICYBER</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com/" />
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jomolhari&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Styles existants */
+    .main-content {
+      position: absolute;
+      top: 68%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    .forgot-password {
+      font-size: 14px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .button-17:last-child {
+      margin-bottom: 10px;
+    }
+    /* Styles pour les messages de validation */
+    .message {
+      color: #000; /* Couleur par défaut */
+      margin-top: 10px;
+    }
+    .error {
+      color: red;
+    }
+    .success {
+      color: green;
+    }
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #0066ff;
+}
+  </style>
+</head>
+<body>
+  <div class="header">
+    <a href="../index.html">
+      <img src="vigicyber.png" alt="vigicyber.fr" class="logo" />
+    </a>
+    <div class="buttons">
+      <button class="button-17" role="button" onclick="location.href='../index.html';">Accueil</button>
+      <button class="button-17" role="button" onclick="location.href='mailto:contact@vigicyber.fr';">Nous rejoindre</button>
+      <button class="button-17" role="button" onclick="location.href='index.html';">Mon espace client</button>
+    </div>
+  </div>
+  <div class="main-content">
+    <h1>Connexion à votre compte</h1>
+    <form id="loginForm">
+      <label for="username">Nom d'utilisateur:</label><br>
+      <input type="text" id="username" name="username" required><br>
+      <label for="password">Mot de passe:</label><br>
+      <input type="password" id="password" name="password" required><br><br>
+      <input type="button" value="Se connecter" class="button-17" onclick="validateForm()">
+    </form>
+    <button class="button-17" onclick="window.history.back();">Retour</button>
+    <p><a href="mot-de-passe-oublie.html" class="forgot-password">Mot de passe oublié</a></p>
+    <div id="message" class="message"></div>
+  </div>
+  
+  <script>
+function validateForm() {
+  var username = document.getElementById('username').value;
+  var password = document.getElementById('password').value;
+  var message = document.getElementById('message');
+
+  if (!username || !password) {
+    message.textContent = 'Veuillez entrer un nom d\'utilisateur et un mot de passe.';
+    message.className = 'message error';
+  } else {
+    var countDown = 5; // Initialiser le compte à rebours à 5 secondes
+    message.className = 'message success';
+    
+    // Définir une fonction pour mettre à jour le message toutes les secondes
+    var countdownInterval = setInterval(function() {
+      if (countDown > 0) {
+        message.textContent = 'Bienvenue ' + username + '! Redirection dans ' + countDown + ' secondes..';
+        countDown--;
+      } else {
+        clearInterval(countdownInterval); // Arrêter le compte à rebours une fois qu'il atteint 0
+        window.location.href = '../mon-panel/index.html';
+      }
+    }, 1000);
+  }
+}
+
+
+  </script>
+</body>
+
+<!-- Mirrored from vigicyber.fr/mon-espace-client/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 27 Mar 2024 12:38:46 GMT -->
+</html>

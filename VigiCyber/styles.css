@@ -1,0 +1,434 @@
+body {
+  background-image: url('background.jpg'); /* Remplacez 'background.jpg' par le chemin réel de votre image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0; /* Supprime les marges par défaut du body */
+  margin-bottom: 70px; /* Ajustez cette valeur à la hauteur de votre footer */
+  min-height: 100vh; /* Assure que le body a au moins la hauteur de la fenêtre */
+  font-family: "Roboto", sans-serif;
+  color: #333; /* Texte plus foncé pour contraster avec le fond clair */
+}
+
+.header {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Fond blanc semi-transparent */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Ajout pour permettre aux éléments de passer à la ligne */
+  color: #0056b3; /* Bleu clair pour le texte */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Légère ombre pour un effet de profondeur */
+  min-height: 60px; /* Hauteur minimale pour s'adapter au contenu */
+}
+
+
+.logo {
+  width: 120px;
+}
+
+.slogans-section {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Espacement entre les slogans */
+}
+
+.slogan {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  padding: 20px;
+  text-align: center; /* Centre le texte dans chaque slogan */
+}
+
+.slogan:hover {
+  transform: translateY(-10px); /* L'élément se soulève légèrement quand on le survole */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.button-en-savoir-plus {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+  width: auto; /* Ajustement pour ne pas étirer le bouton */
+}
+
+.button-en-savoir-plus:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Le bouton grossit légèrement au survol */
+}
+
+/* Animation d'apparition */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.trusted-companies {
+  text-align: center; /* Centre le titre et les logos */
+  margin: 50px 0; /* Espacement vertical autour de la section */
+}
+
+.trusted-companies h2 {
+  margin-bottom: 30px; /* Espacement entre le titre et les logos */
+}
+
+.companies-logos {
+  display: flex;
+  justify-content: center; /* Centre les logos horizontalement */
+  flex-wrap: wrap; /* Permet aux logos de passer à la ligne sur petits écrans */
+  gap: 20px; /* Espacement entre les logos */
+}
+
+.companies-logos img {
+  height: 100px; /* Ajustez la hauteur pour standardiser les logos */
+  transition: transform 0.3s ease; /* Animation au survol */
+}
+
+.companies-logos img:hover {
+  transform: scale(1.1); /* Agrandit légèrement le logo au survol */
+}
+
+
+.slogan, .button-en-savoir-plus {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.site-footer {
+  background-color: #007bff; /* Couleur de fond du footer */
+  color: white; /* Couleur du texte */
+  text-align: center; /* Centre le contenu */
+  padding: 20px 10px; /* Espacement interne */
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centre les liens */
+  gap: 20px; /* Espacement entre les liens */
+}
+
+.footer-links a {
+  color: white; /* Couleur des liens */
+  text-decoration: none; /* Supprime le soulignement */
+  transition: color 0.3s ease; /* Transition douce pour le survol */
+}
+
+.footer-links a:hover {
+  color: #ffcc00; /* Couleur des liens au survol */
+}
+
+
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+
+.jomolhari-regular {
+  font-family: "Jomolhari", serif;
+}
+
+/* Style pour le texte flouté */
+.floute {
+  color: transparent;
+  text-shadow: 0 0 8px rgba(0,0,0,0.5);
+  cursor: pointer;
+  transition: text-shadow 0.3s ease;
+}
+
+.floute:hover {
+  text-shadow: none; /* Ne pas flouter au survol */
+}
+
+#texteCache { /* Flouter dès le début */
+  text-shadow: 0 0 8px rgba(0,0,0,0.5);
+  color: transparent;
+}
+
+.bouton-defloutage {
+  cursor: pointer;
+  background-color: #e6f7ff; /* Bleu clair */
+  border: 1px solid #b3d9ff; /* Bordure plus foncée */
+  color: #0056b3; /* Bleu pour le texte */
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  margin: 10px 0;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.bouton-defloutage:hover {
+  background-color: #b3d9ff; /* Bleu un peu plus foncé au survol */
+}
+
+.main-content h1, .main-content p {
+  font-family: "Jomolhari", serif;
+}
+
+.main-content h1 {
+  font-size: 36px;
+  color: #0056b3; /* Bleu clair pour le titre */
+}
+
+.main-content p {
+  font-size: 20px;
+  color: #333; /* Assurer la visibilité sur un fond clair */
+}
+
+.main-content {
+  position: relative;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Fond blanc semi-transparent pour le contenu */
+  border-radius: 8px; /* Coins arrondis pour adoucir */
+  max-width: 80%; /* Contrôle de la largeur */
+  margin: 20px auto; /* Centrage du contenu */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Ombre subtile pour le contraste */
+}
+
+.presentation {
+  padding: 40px;
+  background-color: #ffffff; /* Utilisez une couleur de fond plus solide ou adaptée à votre design */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ajoutez une ombre pour du relief */
+  border-radius: 10px; /* Adoucit les bords */
+  max-width: 960px; /* Contrôle de la largeur pour un meilleur focus */
+  margin: 40px auto; /* Centrage et espacement vertical */
+  display: flex;
+  flex-direction: column; /* Assure que les éléments sont bien organisés verticalement */
+  align-items: center; /* Centre les éléments horizontalement */
+  text-align: center; /* Assure que le texte est centré */
+}
+
+.presentation h1 {
+  color: #0056b3; /* Couleur personnalisée pour le titre */
+  margin-bottom: 20px; /* Espacement avant le paragraphe */
+}
+
+.presentation p {
+  font-size: 18px; /* Taille de police pour améliorer la lisibilité */
+  color: #333; /* Couleur de texte optimisée pour le contraste */
+  line-height: 1.6; /* Espacement de ligne pour une meilleure lisibilité */
+}
+
+.centered-buttons {
+  display: flex;
+  justify-content: center; /* Centre les éléments horizontalement */
+  gap: 20px; /* Espacement entre chaque élément */
+  padding: 20px 0; /* Espacement vertical */
+}
+
+.scroll-link {
+  cursor: pointer;
+  background-color: #007bff; /* Bleu, mais ajustez selon votre palette de couleurs */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px; /* Bords arrondis */
+  text-decoration: none; /* Supprime le soulignement par défaut des liens */
+  transition: background-color 0.3s, transform 0.2s; /* Animation au survol */
+}
+
+.scroll-link:hover {
+  background-color: #0056b3; /* Assombrit le bouton au survol */
+  transform: translateY(-2px); /* Légère élévation pour un effet interactif */
+}
+
+.scroll-link:active {
+  transform: translateY(1px); /* Simule un effet de pression sur le bouton */
+}
+
+.logo-container {
+  position: relative;
+  text-align: center; /* Centre le contenu horizontalement */
+  margin: 40px 0; /* Espacement avant et après la section */
+}
+
+.logo-container img.logo {
+  max-width: 300px; /* Ajustez selon la taille de votre logo */
+  margin: 0 auto; /* Centre le logo horizontalement */
+  display: block; /* Assure que le logo est centré correctement */
+}
+
+.logo-container img.logo {
+  max-width: 200px; /* Augmentez selon la taille désirée pour votre logo */
+  display: block;
+}
+
+
+/* Styles pour .button-17 */
+.button-17 {
+  align-items: center;
+  appearance: none;
+  background-color: #fff;
+  border-radius: 24px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #3c4043;
+  cursor: pointer;
+  display: inline-flex;
+  fill: currentcolor;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: .25px;
+  line-height: normal;
+  flex-grow: 1; /* Permet aux boutons de grandir pour remplir l'espace */
+  text-align: center; /* S'assure que le texte est centré dans chaque bouton */
+  margin: 0 15px; /* Ajoute une marge des deux côtés de chaque bouton */
+  max-width: 100%;
+  overflow: visible;
+  padding: 2px 24px;
+  position: relative;
+  text-transform: none;
+  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1), opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  will-change: transform,opacity;
+  z-index: 0;
+}
+
+.button-lire-plus {
+  display: inline-flex;
+  margin: 20px auto;
+  clear: both;
+  padding: 10px 25px;
+  border-radius: 30px; /* Bords arrondis pour un look moderne */
+  border: none; /* Supprime la bordure par défaut */
+  background-color: #007BFF; /* Couleur de fond bleue */
+  color: white; /* Texte en blanc pour contraster avec le fond bleu */
+  font-size: 16px; /* Taille de la police augmentée pour la lisibilité */
+  cursor: pointer; /* Change le curseur en pointeur pour indiquer qu'il s'agit d'un bouton cliquable */
+  transition: background-color 0.3s, transform 0.2s; /* Transition douce pour le survol et le clic */
+}
+
+.button-lire-plus:hover {
+  background-color: #0056b3; /* Assombrit le bouton au survol pour un feedback visuel */
+  transform: translateY(-2px); /* Légère élévation du bouton pour un effet interactif */
+}
+
+.button-lire-plus:active {
+  transform: translateY(1px); /* Simule un effet de pression sur le bouton */
+}
+
+
+.button-17:hover, .button-17:focus, .button-17:active {
+  /* Styles pour les états hover, focus, et active */
+  background: #F6F9FE;
+  color: #174ea6;
+}
+
+.button-17:active {
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+}
+
+.button-17:focus {
+  border: 2px solid #4285f4;
+  outline: none;
+}
+
+.button-17:not(:disabled) {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):hover {
+  box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+}
+
+.button-17:not(:disabled):focus {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):active {
+  box-shadow: rgba(60, 64, 67, .3) 0 
+
+/* Media query pour les tablettes */
+@media (max-width: 768px) {
+  .header, .slogans-section, .trusted-companies, .main-content, .presentation, .footer-links {
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .slogan, .companies-logos img, .main-content, .presentation, .logo-container img.logo, .buttons a, .button-17, .button-lire-plus {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .buttons, .footer-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    width: 80px; /* Réduire la taille du logo pour les tablettes */
+  }
+}
+
+/* Media query pour les téléphones mobiles */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px; /* Réduction du padding sur les petits écrans */
+  }
+}
+
+
+  .slogan, .companies-logos img, .main-content, .presentation, .logo-container img.logo, .buttons a, .button-17, .button-lire-plus {
+    width: 100%;
+  }
+
+  .logo {
+    width: 60px; /* Réduire encore la taille du logo pour les mobiles */
+  }
+
+  .main-content h1 {
+    font-size: 24px; /* Adapter la taille du texte pour les écrans plus petits */
+  }
+
+  .main-content p, .presentation p {
+    font-size: 16px;
+  }
+
+  .button-en-savoir-plus, .scroll-link, .button-17, .button-lire-plus {
+    padding: 8px 16px;
+    font-size: 14px; /* Réduire la taille du texte et du padding pour les boutons */
+  }
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  /* Autres styles pour vos liens */
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Cache les liens de navigation sur les petits écrans */
+  }
+
+  .menu-hamburger {
+    display: block; /* Affiche le menu hamburger sur les petits écrans */
+  }
+}

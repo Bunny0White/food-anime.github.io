@@ -1,0 +1,127 @@
+
+<!-- Mirrored from vigicyber.fr/cgu-legales/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 27 Mar 2024 12:38:49 GMT -->
+<head>
+  <meta charset="UTF-8" />
+  <title>VIGICYBER - Sécurité Avancée</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com/" />
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jomolhari&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin: 0;
+      min-height: 100vh;
+    }
+    /* Styles existants */
+    /* Ajouts pour le nouveau bouton et la div de contenu */
+    .article-container {
+      text-align: center;
+      margin-top: 50px;
+    }
+    .article-container img {
+      max-width: 100%;
+    }
+    .article-content {
+      margin-top: 20px;
+      display: none; /* Initialement caché */
+    }
+    .button-lire-plus {
+      /* Styles existants pour le bouton */
+      display: inline-flex;
+      margin-top: 20px; /* Ajout d'une marge en haut */
+      /* Autres styles */
+    }
+    /* Styles pour :hover, :focus, :active déjà inclus */
+    .content {
+      background: rgba(255, 255, 255, 0.8);
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 80%;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    h1, h2, p {
+      font-family: 'Jomolhari', serif;
+    }
+    ul {
+      list-style-type: none;
+    }
+  </style>
+</head>
+<body>
+<div class="header">
+  <a href="../index.html"><img src="vigicyber.png" alt="Logo VIGICYBER" class="logo" /></a>
+  <div class="buttons">
+    <button class="button-17" role="button" onclick="location.href='../index.html';">Accueil</button>
+    <button class="button-17" role="button" onclick="location.href='mailto:contact@vigicyber.fr';">Nous rejoindre</button>
+    <button class="button-17" role="button" onclick="location.href='../mon-espace-client/index.html';">Mon espace client</button>
+  </div>
+</div>
+
+<div class="content">
+  <h1>Conditions Générales d'Utilisation</h1>
+  <p>Les présentes conditions générales d'utilisation (ci-après "CGU") ont pour objet l'encadrement juridique des modalités de mise à disposition des services du site VIGICYBER et leur utilisation par "l'Utilisateur".</p>
+  
+  <h2>Article 1 : Objet</h2>
+  <p>Les CGU doivent être acceptées par tout Utilisateur souhaitant accéder au site. Elles constituent le contrat entre le site et l'Utilisateur. L’accès au site par l’Utilisateur signifie son acceptation des présentes CGU.</p>
+  
+  <h2>Article 2 : Mentions légales</h2>
+  <p>L'édition du site VIGICYBER est assurée par la Société VIGICYBER SA au capital de [xxxx] euros, immatriculée au RCS de [Ville] sous le numéro [xxxxx].</p>
+  
+  <!-- Ajoutez autant d'articles que nécessaire pour couvrir tous les aspects de vos CGU -->
+  
+  <h2>Article 3 : Accès aux services</h2>
+  <p>Le site permet à l'Utilisateur un accès gratuit aux services suivants : [...]. Les services sont accessibles gratuitement à tout Utilisateur ayant un accès à internet. Tous les coûts afférents à l'accès, que ce soient les frais matériels, logiciels ou d'accès à internet sont exclusivement à la charge de l'Utilisateur.</p>
+  
+  <h2>Article 4 : Responsabilité de l'Utilisateur</h2>
+  <p>L'Utilisateur est responsable des risques liés à l’utilisation de son identifiant de connexion et de son mot de passe. Le mot de passe de l’Utilisateur doit rester secret. En cas de divulgation de mot de passe, VIGICYBER décline toute responsabilité.</p>
+  
+  <h2>Article 5 : Propriété intellectuelle</h2>
+  <p>Les marques, logos, signes ainsi que tous les contenus du site (textes, images, son...) font l'objet d'une protection par le Code de la propriété intellectuelle et plus particulièrement par le droit d'auteur.</p>
+
+<div class="logo-container">
+  <img src="vigicyber.png" alt="Logo VigiCyber" class="logo" />
+  <div class="text text-top-right"><br>© VIGICYBER - 2024</div>
+  <div class="text text-top-right">Tous droits réservés.</div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="index.html">Conditions Générales</a>
+    <a href="index.html">Charte sur la vie privée</a>
+    <a href="../mon-espace-client/index.html">Espace client</a>
+    <a href="../admin/index.html">Espace Administrateur</a>
+    <a href="index.html">Mentions légales</a>
+    <a href="mailto:contact@vigicyber.fr">Contact</a>
+  </div>
+</footer>
+
+<script>
+function afficherTexte() {
+  document.getElementById('contenu-cache').style.display = 'block'; // Affiche le texte
+  document.getElementById('bouton-lire-plus').style.display = 'none'; // Cache le bouton
+}
+
+function toggleTexte() {
+  var contenu = document.getElementById('contenu-cache');
+  var bouton = document.getElementById('bouton-lire-plus');
+  
+  if (contenu.style.display === 'block') {
+    contenu.style.display = 'none';
+    bouton.innerHTML = 'Lire plus';
+  } else {
+    contenu.style.display = 'block';
+    bouton.innerHTML = 'Lire moins';
+  }
+}
+</script>
+
+</body>
+
+<!-- Mirrored from vigicyber.fr/cgu-legales/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 27 Mar 2024 12:38:49 GMT -->
+</html>

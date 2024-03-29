@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<!-- Mirrored from vigicyber.fr/mon-panel/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 27 Mar 2024 12:38:50 GMT -->
+<head>
+  <meta charset="UTF-8" />
+  <title>Espace Client - VIGICYBER</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com/" />
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jomolhari&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Aucun style supplémentaire n'est nécessaire ici puisque nous réutilisons styles.css -->
+</head>
+<body>
+  <div class="header">
+    <a href="../index.html">
+      <img src="vigicyber.png" alt="vigicyber.fr" class="logo" />
+    </a>
+  <div class="buttons">
+    <button class="button-17" onclick="location.href='../index.html';">Accueil</button>
+    <button class="button-17" onclick="location.href='mailto:contact@vigicyber.fr';">Contact</button>
+    <!-- Utiliser un menu déroulant pour les actions supplémentaires -->
+    <div class="dropdown">
+      <button class="button-17 dropdown-toggle">Mon compte</button>
+      <div class="dropdown-content">
+		<a href="../index.html" onclick="event.preventDefault(); location.href='index.html';">Mon espace</a>
+        <a href="../index.html" onclick="event.preventDefault(); location.href='mes-factures/index.html';">Facturations</a>
+        <a href="../index.html" onclick="event.preventDefault(); location.href='../index.html';">Se déconnecter</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="main-content">
+  <h1>Bienvenue dans votre espace client</h1>
+  <p>Gérez vos services, suivez vos incidents et accédez à vos rapports de sécurité.</p>
+  <div class="article-container">
+    <!-- Section Services -->
+    <div>
+      <h2>Services</h2>
+      <p>Gérez vos abonnements et découvrez de nouveaux services.</p>
+      <button class="button-17">Gérer mes services</button>
+      <button class="button-17">Ajouter un service</button>
+      <button class="button-17">Consulter le catalogue</button>
+    </div>
+    <!-- Section Incidents -->
+    <div>
+      <h2>Incidents</h2>
+      <p>Suivez l'état de vos incidents et communiquez avec notre équipe de support.</p>
+      <button class="button-17">Suivre un incident</button>
+      <button class="button-17">Créer un incident</button>
+      <button class="button-17">Historique des incidents</button>
+    </div>
+    <!-- Section Rapports -->
+    <div>
+      <h2>Rapports</h2>
+      <p>Accédez à vos rapports de sécurité et à l'analyse de vos données.</p>
+      <button class="button-17">Accéder aux rapports</button>
+      <button class="button-17">Demander un rapport personnalisé</button>
+      <button class="button-17">Rapports d'audit</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function afficherSection(sectionId) {
+    var sections = document.querySelectorAll('.content-section');
+    sections.forEach(function(section) {
+      section.style.display = 'none';
+    });
+    document.getElementById(sectionId).style.display = 'block';
+  }
+</script>
+</body>
+
+<!-- Mirrored from vigicyber.fr/mon-panel/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 27 Mar 2024 12:38:52 GMT -->
+</html>
+
